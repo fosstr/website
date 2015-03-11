@@ -1,102 +1,386 @@
+<!--
+
+*********************************************************************
+*																	*
+*	Welcome to the official Website of FOSSTR - Belgaum!			*
+*	This is the source code for the FOSS-Website, local chapter!!!	*
+*																	*
+*********************************************************************
+
+-->
+<?php
+$count = ("hitcounter.txt");
+$hits = file($count);
+$hits[0] ++;
+$fp = fopen($count , "w");
+fputs($fp , "$hits[0]");
+fclose($fp);
+#echo $hits[0];
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="FOSSTR">
-		<meta name="author" content="Nikhil Patil">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Foss Belgaum">
+<meta name="author" content="Nikhil Patil">
+<title>FOSSTR | Belgaum</title>
+<link href='css/bootstrap.css' rel='stylesheet'>
+<link href='css/main.css' rel='stylesheet'>
+</head>
 
-		<title>FOSSTR</title>
-		<link href='css/bootstrap.min.css' rel='stylesheet'>
-		<link href='css/main.css' rel='stylesheet'>
-	</head>
-	<body>
-	<div class='navbar navbar-inverse navbar-static-top'>
-		<div class='container'>
-				<a href='index.html' class='navbar-brand'>FOSSTR</a>
-				<ul class='nav navbar-nav  navbar-right collapse navbar-collapse'>
-					<li><a href='index.html'>Home</a></li>
-					<li><a href='http://freeopensourcesoftware.org'>Foss</a></li>
-					<li><a href='http://en.wikipedia.org/wiki/Free_and_open-source_software'>Wiki</a></li>
-				</ul>
+<body>
+<div class='navbar navbar-inverse navbar-fixed-top animate'>
+	<div class='container'>
+		<div class='navbar-header'>
+			<a href='./index.php' class='navbar-brand'>FOSSTR</a>
+			<button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+			<span class='sr-only'>Toggle Navigation</span>
+			<span class='icon-bar'></span>
+			<span class='icon-bar'></span>
+			<span class='icon-bar'></span>
+			</button>
 		</div>
-  </div>
-		<div class='row well text-center well-lg'>
-			<div class='col-md-5 col-md-offset-1'>
-				<h2> What is FOSS? </h2>
-					<p class='lead'> Foss Description goes here!</p>
-					<button type='button' class='btn btn-lg btn-info' onclick="location.href='http://freeopensourcesoftware.org/index.php?title=Main_Page'">Know More</button>
-				</div>
-
-			<div class='col-md-6 hidden-xs'>
-				<img src='images/foss2.jpg' alt='Foss is HERE!' class='img-responsive img-circle' />
-			</div>
-		</div>
-		<div class='quote'>
-			<div class='container'>
-				<center><blockquote>
-					<p>Because open source software features open code, more programmers are able to view the code, create new functionality, and fix bugs. This follows the same natural way that science has developed over time.</p>
-					<footer>Chen Nan Yang in <cite title="Source Title">Taoism of Open Source</cite></footer>
-				</blockquote></center>
-			</div>
-		</div>
-
-		<div class='row text-center features'>
-			<div class='col-sm-4 col-xs-4'><!-- col-xs-10 col-xs-offset-1'>-->
-				<i class='glyphicon glyphicon-flag'></i>
-				<h3>FOSSTR</h3>
-				<p> Details about our Community!</p>
-			</div>
-			<div class='col-sm-4 col-xs-4'><!-- col-xs-6'>-->
-				<i class='glyphicon glyphicon-link'></i>
-				<h3>Join Us!</h3>
-				<p> Foss Venue and Timing details!</p>
-			</div>
-			<div class='col-sm-4 col-xs-4'><!-- col-xs-6'>-->
-				<i class='glyphicon glyphicon-envelope'></i>
-				<h3>Stay Updated!</h3>
-				<p> Join our mailing list Here! (TODO)</p>
-			</div>
-		</div>
-
-
-    <!--************Footer*******************-->
-		<div class='footer'>
-		<div class='container'>
-        <div class='row'>
-		      <div class='col-md-3'>
-            <h4>Who We Are</h4>
-            <p>TODO</p>
-          	<p><a href='about.html'>More About Us</a></p>
-        </div>
-        <div class='col-md-2 col-md-offset-1'>
-          <h4>Links</h4>
-          <ul class='list-unstyled'>
-            <li><a href='/'>Home</a></li>
-          </ul>
-        </div>
-		<div class='col-md-2'>
-			<h4>Stay in Touch</h4>
-			<ul class='list-unstyled'>
-            <li><a href='about.html'>About</a></li>
-            <li><a href='contact.html'>Contact Us</a></li>
-            <li><a href='/blog'>Blog</a></li>
-          </ul>
-        </div>
-        <div class='col-md-3 col-md-offset-1'>
-          <h4>Contact Us</h4>
-          <ul class='list-unstyled'>
-            <li>Our Address (TODO)</li>
-          </ul>
-          <p>FOSSTR.org &copy;2015.</p>
-        </div>
-		</div>
-		</div>
-		</div>
-		<!--************Footer*******************-->
-
+		<ul class='nav navbar-right navbar-nav collapse navbar-collapse'>
+			<li><a href='http://freeopensourcesoftware.org' target='_blank'>Foss</a></li>
+			<li><a href='http://en.wikipedia.org/wiki/Free_and_open-source_software' target='_blank'>Wiki</a></li>
+			<li><a href="http://webchat.freenode.net" target='_blank'>IRC</a></li>
+		</ul>
 	</div>
-	</body>
+</div>
 
+<div class='row well'>
+	<div class='col-sm-12 col-xs-12 col-md-12 text-center'>
+		<h2>FOSSTR</h2>
+		<p class='lead'>Fostering Free and Open Source Software!</p>
+		<button type='button' class='btn btn-lg btn-info' onclick="location.href='http://freeopensourcesoftware.org/index.php?title=Main_Page'">Know More</button>
+	</div>
+</div>
+
+<div class="row container">
+	<div class="well col-md-6 col-md-offset-1">
+		<div class="container">
+			<h2><b>Objectives</b></h2><br>
+			<ul class='list-unstyled'>
+				<li><b>1. Education (Learn and Share)</b></li>
+					<ul class='list-unstyled'>
+						<li>1.1 To share the empowerment &amp freedoms that FOSS brings</li>
+						<li>1.2 To organise study-programs and events on various types of FOSS solutions</li>
+					</ul>
+					<br>
+				<li><b>2. Advocacy</b></li>
+					<ul class='list-unstyled'>
+						<li>2.1 Encourage use of FOSS in organizations</li>
+						<li>2.2 Encourage use of FOSS for personal use</li>
+						<li>2.3 Encourage use of open standards for document exchange</li>
+					</ul>
+					<br>
+				<li><b>3. Contribution</b></li>
+					<ul class='list-unstyled'>
+						<li>3.1 Active: code, patch, assist with localisation and documentation</li>
+						<li>3.2 Passive: give feedback received from community to developers</li>
+					</ul>
+					<br>
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-4 col-md-offset-1">
+		<div class="row text-center">
+			<div class="panel panel-success">
+				<div class="panel-heading"><strong>Who We Are</strong></div>
+				<div class="panel-body">
+					<strong>
+						<a href='https://fosstr.org' target='_blank'>Community Members</a>
+					</strong>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="panel panel-warning">
+				<div class="panel-heading"><strong>Join Us Now!</strong></div>
+				<div class="panel-body">
+					<strong>
+						<a href='https://fosstr.org/rsvp' target='_blank'>RSVP details</a>
+					</strong>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="panel panel-danger">
+				<div class="panel-heading"><strong>Stay Updated</strong></div>
+				<div class="panel-body">
+					<strong>
+						<a href='https://mail.fosstr.org/mailman/listinfo/fosstr' target='_blank'>Mailing List</a>
+					</strong>
+				</div>
+			</div>
+		</div>
+	</div><!--2nd Col ends-->
+</div><!--row ends-->
+
+	
+
+	
+</div>
+
+<!-- Footer Trial Space -->
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-12">
+                    <h3> Links </h3>
+					<ul class="	nav nav-pills nav-stacked">	
+                        <li> <a href="http://webchat.freenode.net/" target="_blank"> IRC - fosstr </a> </li>
+                        <li> <a href="http://freeopensourcesoftware.org/" target="_blank"> Official Site </a> </li>
+                        <li> <a href="http://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank">Foss-Wiki </a> </li>
+                        <li> <a href="./optional.html" target="_blank"> Defition (Optional) </a> </li>                        
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6 hidden-sm hidden-xs">
+                    <h3> Speakers </h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li> <a href="#" target="_blank"> Speaker - 1 </a> </li>
+                        <li> <a href="#" target="_blank"> Speaker - 2 </a> </li>
+                        <li> <a href="#" target="_blank"> Speaker - 3 </a> </li>
+                        <li> <a href="#" target="_blank"> Speaker - 4 </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6 hidden-sm hidden-xs">
+                    <h3> To do </h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li> <a href="#" target="_blank"> Link - 1 </a> </li>
+                        <li> <a href="#" target="_blank" target="_blank"> Link - 2 </a> </li>
+                        <li> <a href="#" target="_blank"> Link - 3 </a> </li>
+                        <li> <a href="#" target="_blank"> Link - 4 </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6 hidden-sm hidden-xs">
+                    <h3> Sponsors </h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li> <a href="#" target="_blank"> Sponsor - 1 </a> </li>
+                        <li> <a href="#" target="_blank"> Sponsor - 2 </a> </li>
+                        <li> <a href="#" target="_blank"> Sponsor - 3 </a> </li>
+                        <li> <a href="#" target="_blank"> Sponsor - 4 </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Subscribe here!</h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+                                <button class="btn  bg-gray" type="button"> Subscribe [Todo]<i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="https://facebook.com/fosstr" target="_blank"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="https://twitter.com/fosstr-bgm" target="_blank"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="https://plus.google.com/fosstr" target="_blank"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="https://pinterest.com/fosstr" target="_blank"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="https://youtube.com/fosstr" target="_blank"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © <b>fosstr.org</b> 2015. All right reserved. </p>
+			<p class="pull-right">Website Hits: <span>	<?php echo "$hits[0]";?>	</span></p>
+		</div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
+
+<!-- Footer Trial Space ends -->
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='js/bootstrap.js'></script>
+</div>
+
+</body>
 </html>
+
+<!-- Working codes but not useful in the present context!
+
+*************************     Footer - Simple    *********************
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Place sticky footer content here.</p>
+  </div>
+</footer>
+
+******************************Payment icons***********************************
+
+<div class="pull-right">
+                <ul class="nav nav-pills payments">
+                	<li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul> 
+</div>
+
+
+************ Quotation! ***********************************************************************
+<div class='quote'>
+<div class='container'>
+<blockquote class='text-center'>
+<p>Because open source software features open code, more programmers are able to view the code, create new functionality, and fix bugs. This follows the same natural way that science has developed over time.</p>
+<footer>Chen Nan Yang in <cite title="Source Title">Taoism of Open Source</cite></footer>
+</blockquote>
+</div>
+</div>
+<br>
+<br>
+
+
+************************Footer 2*****************************
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">© 2014 - Site Built By Mr. M.
+           <a href="http://tinyurl.com/tbvalid" target="_blank" >HTML 5 Validation</a>
+      </p>
+      
+      <a href="http://youtu.be/zJahlKPCL9g" class="navbar-btn btn-danger btn pull-right">
+      <span class="glyphicon glyphicon-star"></span>  Subscribe to our mailing list!</a>
+    </div>
+</div>
+
+************************Footer Initial*****************************
+<footer class='footer'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-2'>
+				<h4>Who We Are</h4>
+				<p class='navbar-text'>TODO</p>
+				<p class='navbar-text'><a href='about.html'>More About Us</a></p>
+			</div>
+			<div class='col-md-2 col-md-offset-1'>
+				<h4>Links</h4>
+				<ul class="nav nav-pills nav-stacked">
+				<li><a href='/'>Home</a></li>
+				</ul>
+			</div>
+			<div class='col-md-2 col-md-offset-1'>
+				<h4>Stay in Touch</h4>
+				<ul class="nav nav-pills nav-stacked">
+				<li><a href='about.html'>About</a></li>
+				<li><a href='contact.html'>Contact Us</a></li>
+				<li><a href='/blog'>Blog</a></li>
+				</ul>
+			</div>
+				<div class='col-md-3 col-md-offset-1'>
+				<h4>Contact Us</h4>
+				<ul class="nav nav-pills nav-stacked">
+				<li class='navbar-text'>Our Address (TODO)</li>
+				</ul>
+				</div>
+		</div>
+		<div><p class='navbar-text text-center'>fosstr.org &copy;2015.</p></div>
+	</div>
+</div>
+
+**********************************   Image       ********************************************************
+
+	<img src='images/foss2.jpg' alt='Foss is HERE!' class=' hidden-sm img-responsive img-circle' />
+
+
+**************************Footer Third***************************
+
+<div class="container text-center">
+    <hr /><hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product for Mac</a></li>
+          <li><a href="#">Product for Windows</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Web analytics</a></li>
+          <li><a href="#">Presentations</a></li>          
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product Help</a></li>
+          <li><a href="#">Developer API</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+  <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="/">© 2013 Company Name.</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+-->
+
+<!--
+<div class="navbar navbar-inverse navbar-static-bottom">
+
+<div class='footer'>
+	<div class='container fluid'>
+		<div class='row'>
+			<div class='col-md-2'>
+				<h4>Who We Are</h4>
+				<p class='navbar-text'>TODO</p>
+				<p class='navbar-text'><a href='about.html'>More About Us</a></p>
+			</div>
+			<div class='col-md-2 col-md-offset-1'>
+				<h4>Links</h4>
+				<ul class="nav nav-pills nav-stacked">
+				<li><a href='/'>Home</a></li>
+				</ul>
+			</div>
+			<div class='col-md-2 col-md-offset-1'>
+				<h4>Stay in Touch</h4>
+				<ul class="nav nav-pills nav-stacked">
+				<li><a href='about.html'>About</a></li>
+				<li><a href='contact.html'>Contact Us</a></li>
+				<li><a href='/blog'>Blog</a></li>
+				</ul>
+			</div>
+				<div class='col-md-3 col-md-offset-1'>
+				<h4>Contact Us</h4>
+				<ul class="nav nav-pills nav-stacked">
+				<li class='navbar-text'>Our Address (TODO)</li>
+				</ul>
+				</div>
+		</div>
+		<hr />
+		<div class='row'>
+			<p class='navbar-text text-center'>
+				<center>
+					fosstr.org &copy;2015.
+				</center>
+			</p>
+		</div>
+	</div>
+</div>
+-->
